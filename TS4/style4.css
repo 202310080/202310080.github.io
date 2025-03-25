@@ -1,0 +1,161 @@
+/* Background */
+body {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Title and Subtitle */
+.title {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+    margin-top: 20px;
+}
+
+.subtitle {
+    color: #ddd;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* Main Menu Button */
+.menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 100;
+    transition: background 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Food Cards */
+.food-cards {
+    display: flex;
+    justify-content: left;
+    gap: 10px; /* Space between cards */
+    flex-wrap: nowrap; /* Prevents cards from moving to the next line */
+    margin: 0 auto;
+    max-width: 90%;
+
+}
+
+/* Adjusted Card Style */
+.food-card {
+    width: 250px; /* Compact but still readable */
+    height: 500px; /* Keeps it long and structured */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    background: yellow;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+}
+
+.food-card:hover {
+    transform: scale(1.05);
+}
+
+/* Card Image */
+.food-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+.card-title, .card-details {
+    font-family: 'Bookman Old Style', 'Trebuchet MS', Perpetua, serif; /* Fine-dining elegance */
+    transition: font-family 0.3s ease-in-out; /* Smooth transition */
+}
+
+.food-card:hover .card-title, 
+.food-card:hover .card-details {
+    font-family: 'Copperplate', 'Georgia', 'Garamond', serif; /* More luxurious font on hover */
+}
+
+/* Apply the princess-like font to hover details */
+.food-card:hover .hover-details {
+    font-family: 'Lucida Calligraphy', 'Brush Script MT', 'Monotype Corsiva', cursive;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+
+/* Hover Effect - Description Box */
+.food-card .hover-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.food-card:hover .hover-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pop-up for Food Details */
+.details-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+/* Details Content */
+.details-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+/* Hide close button (Main Menu will close pop-up) */
+.close-btn {
+    display: none;
+}

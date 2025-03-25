@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Guide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <!-- Background -->
+    <div class="container-fluid main-container">
+        <h1 class="title">BEST OF MERADDEN <br> RESTAURANT GUIDE</h1>
+        <p class="subtitle">PRODUCED BY: LOCAL MAGAZINE</p>
+
+        <!-- Main Menu Button -->
+        <button id="menuBtn" class="menu-button">MAIN MENU</button>
+
+        <!-- Food Cards -->
+        <div class="row food-cards">
+            <div class="col-md-3">
+                <div class="card food-card">
+                    <div class="card-title">GABEL LOFFEL</div>
+                    <img src="swiss.jpg" alt="Gabel Loffel">
+                    <div class="hover-details">Authentic Swiss flavors that take you straight to the Alps.</div>
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <div class="card food-card">
+                    <div class="card-title">GARY GARI</div>
+                    <img src="italian.jpg" alt="Gary Gari">
+                    <div class="hover-details">The delicious ingredients fit all your pasta cravings and more.</div>
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <div class="card food-card">
+                    <div class="card-title">IL PIATTO</div>
+                    <img src="steakhouse.jpg" alt="Il Piatto">
+                    <div class="hover-details">Premium steakhouse experience with the finest cuts of meat.</div>
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <div class="card food-card">
+                    <div class="card-title">PIERRE PLATTERS</div>
+                    <img src="seafood.jpg" alt="Pierre Platters">
+                    <div class="hover-details">Fresh seafood delicacies from the ocean straight to your plate.</div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <!-- Food Details Pop-up -->
+    <div id="foodDetails" class="details-popup">
+        <div class="details-content">
+            <h2 id="foodTitle"></h2>
+            <p id="foodDescription"></p>
+        </div>
+    </div>
+
+    <script src="script4.js"></script>
+</body>
+</html>
