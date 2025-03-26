@@ -19,47 +19,72 @@
 
         <!-- Food Cards -->
         <div class="row food-cards">
+
             <div class="col-md-3">
-                <div class="card food-card">
+                <div class="card food-card" data-name="GABEL LOFFEL" 
+                data-description="Delicious Swiss cuisine featuring rich flavors and traditional dishes."
+                data-details="235 GLENDALE AVE. | CATEGORY: SWISS <br> MERIDIEN CITY | OPEN: 10AM to 10PM <br> 
+                T:490 49 4000 | PRICE: $$$ <br> W: GANDG.RES">
                     <div class="card-title">GABEL LOFFEL</div>
                     <img src="swiss.jpg" alt="Gabel Loffel">
-                    <div class="hover-details">Authentic Swiss flavors that take you straight to the Alps.</div>
+                    <div class="hover-details">Get out your Lederhosen</div>
                 </div>
             </div>
-        
+
             <div class="col-md-3">
-                <div class="card food-card">
+                <div class="card food-card" data-name="GARY GARI" 
+                data-description="Authentic Japanese dining with fresh sushi and traditional flavors."
+                data-details="76 NO. HIGHLAND AVE. | CATEGORY: JAPANESE <br> MERIDIEN CITY | OPEN: 5PM to 10PM <br> 
+                T:490 24 6709 | PRICE: $$ <br> W: GANDG.RES">
                     <div class="card-title">GARY GARI</div>
-                    <img src="italian.jpg" alt="Gary Gari">
-                    <div class="hover-details">The delicious ingredients fit all your pasta cravings and more.</div>
+                    <img src="japanese.jpg" alt="Gary Gari">
+                    <div class="hover-details">The delicious headquarters for all your ginger-related needs!</div>
                 </div>
             </div>
         
             <div class="col-md-3">
-                <div class="card food-card">
+                <div class="card food-card" data-name="IL PIATTO" 
+                data-description="Classic Italian dishes with a modern twist."
+                data-details="1213 SHOUTOUT WAY | CATEGORY: ITALIAN <br> MERIDIEN CITY | OPEN: 11AM to 11PM <br> 
+                T:490 42 1204 | PRICE: $$ <br> W: ILPIATTO.RES">
                     <div class="card-title">IL PIATTO</div>
-                    <img src="steakhouse.jpg" alt="Il Piatto">
-                    <div class="hover-details">Premium steakhouse experience with the finest cuts of meat.</div>
+                    <img src="italian.jpg" alt="Il Piatto">
+                    <div class="hover-details">Got wild finicky kids? Head for Il Piatto for kid-friendly Italian fun!</div>
                 </div>
             </div>
         
             <div class="col-md-3">
-                <div class="card food-card">
+                <div class="card food-card" data-name="PIERRE PLATTERS" 
+                data-description="Exquisite French platters with a fusion of fine ingredients and bold flavors."
+                data-details="68 8TH AVE. | CATEGORY: FUSION <br> MERIDIEN CITY | OPEN: 11AM to 11PM <br> 
+                T:490 69 3080 | PRICE: $$$ <br> W: PIERREP.RES">
                     <div class="card-title">PIERRE PLATTERS</div>
-                    <img src="seafood.jpg" alt="Pierre Platters">
-                    <div class="hover-details">Fresh seafood delicacies from the ocean straight to your plate.</div>
+                    <img src="fusion.jpg" alt="Pierre Platters">
+                    <div class="hover-details">Smart talks. Smart eats!</div>
                 </div>
             </div>
+
         </div>        
     </div>
 
-    <!-- Food Details Pop-up -->
+    <!-- Food Details Section (Dynamic) -->
     <div id="foodDetails" class="details-popup">
         <div class="details-content">
-            <h2 id="foodTitle"></h2>
-            <p id="foodDescription"></p>
+            <div class="yellow-label" id="foodTitle">Restaurant Name</div>
+            <div class="details-image">
+                <img id="foodImage" src="" alt="Food Image">
+            </div>
+            <div class="details-text">
+                <h2 id="foodHeader">Restaurant Name</h2>
+                <p id="restaurantInfo" class="restaurant-info">
+                    Address | Category | Open Hours | Price  
+                </p>
+                <p id="foodDescription">Description here.</p>
+            </div>
         </div>
     </div>
+
+    
 
     <script src="script4.js"></script>
 </body>

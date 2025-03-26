@@ -44,22 +44,20 @@ body {
     background-color: #45a049;
 }
 
-
 /* Food Cards */
 .food-cards {
     display: flex;
     justify-content: left;
-    gap: 10px; /* Space between cards */
-    flex-wrap: nowrap; /* Prevents cards from moving to the next line */
+    gap: 10px;
+    flex-wrap: nowrap;
     margin: 0 auto;
     max-width: 90%;
-
 }
 
 /* Adjusted Card Style */
 .food-card {
-    width: 250px; /* Compact but still readable */
-    height: 500px; /* Keeps it long and structured */
+    width: 250px;
+    height: 500px;
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -79,6 +77,7 @@ body {
     width: 100%;
 }
 
+/* Hover Effects */
 .food-card:hover {
     transform: scale(1.05);
 }
@@ -91,24 +90,24 @@ body {
     flex-grow: 1;
 }
 
+/* Elegant Font Transitions */
 .card-title, .card-details {
-    font-family: 'Bookman Old Style', 'Trebuchet MS', Perpetua, serif; /* Fine-dining elegance */
-    transition: font-family 0.3s ease-in-out; /* Smooth transition */
+    font-family: 'Bookman Old Style', 'Trebuchet MS', Perpetua, serif;
+    transition: font-family 0.3s ease-in-out;
 }
 
 .food-card:hover .card-title, 
 .food-card:hover .card-details {
-    font-family: 'Copperplate', 'Georgia', 'Garamond', serif; /* More luxurious font on hover */
+    font-family: 'Copperplate', 'Georgia', 'Garamond', serif;
 }
 
-/* Apply the princess-like font to hover details */
+/* Princess-like Font for Details */
 .food-card:hover .hover-details {
     font-family: 'Lucida Calligraphy', 'Brush Script MT', 'Monotype Corsiva', cursive;
     font-weight: normal;
     letter-spacing: 1px;
     font-style: italic;
 }
-
 
 /* Hover Effect - Description Box */
 .food-card .hover-details {
@@ -121,7 +120,6 @@ body {
     padding: 15px;
     font-size: 14px;
     font-weight: bold;
-    text-align: center;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -132,7 +130,7 @@ body {
     transform: translateY(0);
 }
 
-/* Pop-up for Food Details */
+/* Updated Food Details Pop-up */
 .details-popup {
     display: none;
     position: fixed;
@@ -146,16 +144,98 @@ body {
     z-index: 50;
 }
 
-/* Details Content */
+/* Layout for details content */
 .details-content {
     background: white;
-    padding: 20px;
+    display: flex;
+    width: 80%;
+    max-width: 900px;
     border-radius: 10px;
-    width: 50%;
-    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Hide close button (Main Menu will close pop-up) */
-.close-btn {
-    display: none;
+/* Yellow vertical strip */
+.yellow-label {
+    background-color: #ffcc00;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    font-family: 'Georgia', serif;
 }
+
+/* Food Details Text */
+.details-text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.details-text h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d81b1b;
+    font-size: 2rem;
+}
+
+/* Restaurant details */
+.restaurant-info {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.details-text p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+
+
+/* Food Image */
+.details-image {
+    width: 350px;
+    height: auto;
+    border-left: 5px solid #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .details-content {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .yellow-label {
+        writing-mode: horizontal-tb;
+        text-orientation: initial;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .details-image {
+        border-left: none;
+        border-top: 5px solid #ffcc00;
+        width: 100%;
+    }
+
+    .details-text {
+        text-align: center;
+    }
+}
+
+
